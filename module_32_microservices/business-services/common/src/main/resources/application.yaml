@@ -1,0 +1,9 @@
+server:
+  port: 8084
+
+eureka:
+  instance:
+    appname: Dynamic-properties
+
+dynamic-properties:
+  path: "file:business-services\\common\\src\\main\\resources\\conf.properties"
