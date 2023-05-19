@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blocked users</title>
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <h1>Blocked users</h1>
+</header>
+<table>
+    <thead>
+    <tr>
+        <th>User email</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="email : ${emails}">
+        <td th:text="${email}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
