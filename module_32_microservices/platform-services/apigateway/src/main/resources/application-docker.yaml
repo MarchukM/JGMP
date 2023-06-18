@@ -1,0 +1,25 @@
+server:
+  port: 8079
+
+spring:
+  application:
+    name: zuul-server
+
+zuul:
+  prefix: /services
+  routes:
+    one:
+      path: /one/**
+      url: http://one:8081/services/one
+    two:
+      path: /two/**
+      url: http://two:8082/services/two
+
+eureka:
+  instance:
+    appname: zuul-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
